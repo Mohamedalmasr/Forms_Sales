@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monthly Trust Reconciliation Checklist</title>
+    <link rel="stylesheet" href="Monthly_Trust_Reconciliation_Checklist_Form.css">
+</head>
+<body>
+    <div class="mtrc-container">
+        <header class="mtrc-header">
+            <h1>Monthly Trust Reconciliation Checklist</h1>
+            <p class="mtrc-instructions">
+                Use one checklist per trust account per month. Attach this form to the full bank reconciliation package.
+            </p>
+
+            <div class="mtrc-header-grid">
+                <div class="mtrc-field-row">
+                    <label for="mtrc-month" class="mtrc-label">Month</label>
+                    <input type="month" id="mtrc-month" name="mtrc-month" class="mtrc-input">
+                </div>
+                <div class="mtrc-field-row">
+                    <label for="mtrc-date" class="mtrc-label">Date</label>
+                    <input type="date" id="mtrc-date" name="mtrc-date" class="mtrc-input">
+                </div>
+                <div class="mtrc-field-row">
+                    <label for="mtrc-preparedBy" class="mtrc-label">Prepared By</label>
+                    <input type="text" id="mtrc-preparedBy" name="mtrc-preparedBy" class="mtrc-input">
+                </div>
+                <div class="mtrc-field-row">
+                    <label for="mtrc-licensedManager" class="mtrc-label">Licensed Manager</label>
+                    <input type="text" id="mtrc-licensedManager" name="mtrc-licensedManager" class="mtrc-input">
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- B. MONTH-END CUT-OFF -->
+            <section class="mtrc-section">
+                <h2>B. Month-End Cut-Off</h2>
+                <table class="mtrc-table mtrc-table-yn">
+                    <thead>
+                        <tr>
+                            <th class="mtrc-col-checkpoint">Checkpoint</th>
+                            <th class="mtrc-col-response">&nbsp;</th>
+                            <th class="mtrc-col-comments">Comments / Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>All trust transactions for the month recorded.</td>
+                            <td>
+                                <select name="b1_status" class="mtrc-input mtrc-select">
+                                    <option value="Y">Y</option>
+                                    <option value="N">N</option>
+                                    <option value="YN">Y/N</option>
+                                </select>
+                            </td>
+                            <td><textarea name="b1_comments" class="mtrc-input mtrc-textarea"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>All closed deals updated for trust movements.</td>
+                            <td>
+                                <select name="b2_status" class="mtrc-input mtrc-select">
+                                    <option value="Y">Y</option>
+                                    <option value="N">N</option>
+                                    <option value="YN">Y/N</option>
+                                </select>
+                            </td>
+                            <td><textarea name="b2_comments" class="mtrc-input mtrc-textarea"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Complete month-end bank statement obtained.</td>
+                            <td>
+                                <select name="b3_status" class="mtrc-input mtrc-select">
+                                    <option value="Y">Y</option>
+                                    <option value="N">N</option>
+                                    <option value="YN">Y/N</option>
+                                </select>
+                            </td>
+                            <td><textarea name="b3_comments" class="mtrc-input mtrc-textarea"></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- C. TRUST LIABILITY LISTING -->
+            <section class="mtrc-section">
+                <h2>C. Trust Liability Listing</h2>
+                <table class="mtrc-table mtrc-table-yn">
+                    <thead>
+                        <tr>
+                            <th class="mtrc-col-checkpoint">Checkpoint</th>
+                            <th class="mtrc-col-response">&nbsp;</th>
+                            <th class="mtrc-col-comments">Comments / Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Trust liability listing prepared as of month-end.</td>
+                            <td>
+                                <select name="c1_status" class="mtrc-input mtrc-select">
+                                    <option value="Y">Y</option>
+                                    <option value="N">N</option>
+                                    <option value="YN">Y/N</option>
+                                </select>
+                            </td>
+                            <td><textarea name="c1_comments" class="mtrc-input mtrc-textarea"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>File-level / client-level balances clearly shown.</td>
+                            <td>
+                                <select name="c2_status" class="mtrc-input mtrc-select">
+                                    <option value="Y">Y</option>
+                                    <option value="N">N</option>
+                                    <option value="YN">Y/N</option>
+                                </select>
+                            </td>
+                            <td><textarea name="c2_comments" class="mtrc-input mtrc-textarea"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Total trust liability calculated.</td>
+                            <td>
+                                <select name="c3_status" class="mtrc-input mtrc-select">
+                                    <option value="Y">Y</option>
+                                    <option value="N">N</option>
+                                    <option value="YN">Y/N</option>
+                                </select>
+                            </td>
+                            <td><textarea name="c3_comments" class="mtrc-input mtrc-textarea"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Unusual or long-standing balances identified and flagged for review.</td>
+                            <td>
+                                <select name="c4_status" class="mtrc-input mtrc-select">
+                                    <option value="Y">Y</option>
+                                    <option value="N">N</option>
+                                    <option value="YN">Y/N</option>
+                                </select>
+                            </td>
+                            <td><textarea name="c4_comments" class="mtrc-input mtrc-textarea"></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- D. BANK RECONCILIATION -->
+            <section class="mtrc-section">
+                <h2>D. Bank Reconciliation</h2>
+                <table class="mtrc-table mtrc-table-yn">
+                    <thead>
+                        <tr>
+                            <th class="mtrc-col-checkpoint">Checkpoint</th>
+                            <th class="mtrc-col-response">&nbsp;</th>
+                            <th class="mtrc-col-comments">Comments / Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Outstanding deposits listed and support attached.</td>
+                            <td>
+                                <select name="d1_status" class="mtrc-input mtrc-select">
+                                    <option value="Y">Y</option>
+                                    <option value="N">N</option>
+                                    <option value="YN">Y/N</option>
+                                </select>
+                            </td>
+                            <td><textarea name="d1_comments" class="mtrc-input mtrc-textarea"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Outstanding cheques / withdrawals listed and support attached.</td>
+                            <td>
+                                <select name="d2_status" class="mtrc-input mtrc-select">
+                                    <option value="Y">Y</option>
+                                    <option value="N">N</option>
+                                    <option value="YN">Y/N</option>
+                                </select>
+                            </td>
+                            <td><textarea name="d2_comments" class="mtrc-input mtrc-textarea"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Bank errors or other adjustments documented with explanations.</td>
+                            <td>
+                                <select name="d3_status" class="mtrc-input mtrc-select">
+                                    <option value="Y">Y</option>
+                                    <option value="N">N</option>
+                                    <option value="YN">Y/N</option>
+                                </select>
+                            </td>
+                            <td><textarea name="d3_comments" class="mtrc-input mtrc-textarea"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Reconciled bank balance calculated and documented on reconciliation worksheet.</td>
+                            <td>
+                                <select name="d4_status" class="mtrc-input mtrc-select">
+                                    <option value="Y">Y</option>
+                                    <option value="N">N</option>
+                                    <option value="YN">Y/N</option>
+                                </select>
+                            </td>
+                            <td><textarea name="d4_comments" class="mtrc-input mtrc-textarea"></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- E. COMPARISON – RECONCILED BANK BALANCE VS. TRUST LIABILITY -->
+            <section class="mtrc-section">
+                <h2>E. Comparison – Reconciled Bank Balance vs. Trust Liability</h2>
+                <table class="mtrc-table mtrc-table-yn">
+                    <thead>
+                        <tr>
+                            <th class="mtrc-col-checkpoint">Checkpoint</th>
+                            <th class="mtrc-col-response">&nbsp;</th>
+                            <th class="mtrc-col-comments">Comments / Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Reconciled bank balance equals total trust liability listing.</td>
+                            <td>
+                                <select name="e1_status" class="mtrc-input mtrc-select">
+                                    <option value="Y">Y</option>
+                                    <option value="N">N</option>
+                                    <option value="YN">Y/N</option>
+                                </select>
+                            </td>
+                            <td><textarea name="e1_comments" class="mtrc-input mtrc-textarea"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Any differences identified, investigated, and corrected before month-end sign-off.</td>
+                            <td>
+                                <select name="e2_status" class="mtrc-input mtrc-select">
+                                    <option value="Y">Y</option>
+                                    <option value="N">N</option>
+                                    <option value="YN">Y/N</option>
+                                </select>
+                            </td>
+                            <td><textarea name="e2_comments" class="mtrc-input mtrc-textarea"></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mtrc-extra-block">
+                    <label for="e-difference-details" class="mtrc-extra-label">
+                        If there is a difference, describe cause and correction:
+                    </label>
+                    <textarea id="e-difference-details" name="e_difference_details" class="mtrc-input mtrc-textarea"></textarea>
+                </div>
+            </section>
+
+            <!-- F. RECONCILING ITEMS LOG -->
+            <section class="mtrc-section">
+                <h2>F. Reconciling Items Log</h2>
+                <table class="mtrc-table mtrc-table-yn">
+                    <thead>
+                        <tr>
+                            <th class="mtrc-col-checkpoint">Checkpoint</th>
+                            <th class="mtrc-col-response">&nbsp;</th>
+                            <th class="mtrc-col-comments">Comments / Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Reconciling items log updated for current month.</td>
+                            <td>
+                                <select name="f1_status" class="mtrc-input mtrc-select">
+                                    <option value="Y">Y</option>
+                                    <option value="N">N</option>
+                                    <option value="YN">Y/N</option>
+                                </select>
+                            </td>
+                            <td><textarea name="f1_comments" class="mtrc-input mtrc-textarea"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>All reconciling items over two months old reviewed and followed up.</td>
+                            <td>
+                                <select name="f2_status" class="mtrc-input mtrc-select">
+                                    <option value="Y">Y</option>
+                                    <option value="N">N</option>
+                                    <option value="YN">Y/N</option>
+                                </select>
+                            </td>
+                            <td><textarea name="f2_comments" class="mtrc-input mtrc-textarea"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Any stale-dated, unexplained, or irregular items escalated to Licensed Manager for review.</td>
+                            <td>
+                                <select name="f3_status" class="mtrc-input mtrc-select">
+                                    <option value="Y">Y</option>
+                                    <option value="N">N</option>
+                                    <option value="YN">Y/N</option>
+                                </select>
+                            </td>
+                            <td><textarea name="f3_comments" class="mtrc-input mtrc-textarea"></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="mtrc-extra-block">
+                    <label for="f-notes" class="mtrc-extra-label">Notes / follow-up required on aged items:</label>
+                    <textarea id="f-notes" name="f_notes" class="mtrc-input mtrc-textarea"></textarea>
+                </div>
+            </section>
+
+            <!-- G. MONTHS WITH NO ACTIVITY (IF APPLICABLE) -->
+            <section class="mtrc-section">
+                <h2>G. Months With No Activity (If Applicable)</h2>
+                <p class="mtrc-help">
+                    Complete this section only if there were no trust transactions during the month.
+                </p>
+                <table class="mtrc-table mtrc-table-yn">
+                    <thead>
+                        <tr>
+                            <th class="mtrc-col-checkpoint">Checkpoint</th>
+                            <th class="mtrc-col-response">&nbsp;</th>
+                            <th class="mtrc-col-comments">Comments / Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Confirmed there were no trust receipts or disbursements this month.</td>
+                            <td>
+                                <select name="g1_status" class="mtrc-input mtrc-select">
+                                    <option value="Y">Y</option>
+                                    <option value="N">N</option>
+                                    <option value="YN">Y/N</option>
+                                </select>
+                            </td>
+                            <td><textarea name="g1_comments" class="mtrc-input mtrc-textarea"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Trust account bank balance agrees to prior month and to trust liability listing.</td>
+                            <td>
+                                <select name="g2_status" class="mtrc-input mtrc-select">
+                                    <option value="Y">Y</option>
+                                    <option value="N">N</option>
+                                    <option value="YN">Y/N</option>
+                                </select>
+                            </td>
+                            <td><textarea name="g2_comments" class="mtrc-input mtrc-textarea"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Prior reconciling items (if any) still valid and explained.</td>
+                            <td>
+                                <select name="g3_status" class="mtrc-input mtrc-select">
+                                    <option value="Y">Y</option>
+                                    <option value="N">N</option>
+                                    <option value="YN">Y/N</option>
+                                </select>
+                            </td>
+                            <td><textarea name="g3_comments" class="mtrc-input mtrc-textarea"></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- H. SIGN-OFF & FILING -->
+            <section class="mtrc-section">
+                <h2>H. Sign-Off &amp; Filing</h2>
+
+                <div class="mtrc-signoff-block">
+                    <h3>Preparer Declaration</h3>
+                    <p class="mtrc-signoff-text">
+                        I confirm that this monthly trust account reconciliation summary is complete and accurate and that it
+                        is supported by the underlying reconciliation package (including the bank reconciliation, trust
+                        liability listing, and reconciling items log).
+                    </p>
+                    <div class="mtrc-signoff-grid">
+                        <div class="mtrc-field-row">
+                            <label for="prep-name" class="mtrc-label">Prepared By (Name)</label>
+                            <input type="text" id="prep-name" name="prep_name" class="mtrc-input">
+                        </div>
+                        <div class="mtrc-field-row">
+                            <label for="prep-sign" class="mtrc-label">Signature</label>
+                            <input type="text" id="prep-sign" name="prep_sign" class="mtrc-input">
+                        </div>
+                        <div class="mtrc-field-row">
+                            <label for="prep-date" class="mtrc-label">Date</label>
+                            <input type="date" id="prep-date" name="prep_date" class="mtrc-input">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mtrc-signoff-block">
+                    <h3>Licensed Manager Review</h3>
+                    <p class="mtrc-signoff-text">
+                        I have reviewed the monthly trust account reconciliation and I am satisfied that it has been
+                        properly prepared and that the reconciled bank balance agrees to the total trust liability.
+                    </p>
+                    <div class="mtrc-signoff-grid">
+                        <div class="mtrc-field-row">
+                            <label for="lm-name" class="mtrc-label">Licensed Manager (Name)</label>
+                            <input type="text" id="lm-name" name="lm_name" class="mtrc-input">
+                        </div>
+                        <div class="mtrc-field-row">
+                            <label for="lm-sign" class="mtrc-label">Signature</label>
+                            <input type="text" id="lm-sign" name="lm_sign" class="mtrc-input">
+                        </div>
+                        <div class="mtrc-field-row">
+                            <label for="lm-date" class="mtrc-label">Date</label>
+                            <input type="date" id="lm-date" name="lm_date" class="mtrc-input">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mtrc-signoff-block">
+                    <h3>Filing Details</h3>
+                    <div class="mtrc-signoff-grid mtrc-filing-grid">
+                        <div class="mtrc-field-row">
+                            <label for="filed-location" class="mtrc-label">Filed In (Location / Folder / System ID)</label>
+                            <input type="text" id="filed-location" name="filed_location" class="mtrc-input">
+                        </div>
+                        <div class="mtrc-field-row">
+                            <label for="filed-date" class="mtrc-label">Date Filed</label>
+                            <input type="date" id="filed-date" name="filed_date" class="mtrc-input">
+                        </div>
+                        <div class="mtrc-field-row mtrc-review-row">
+                            <label for="annual-review" class="mtrc-label">Reviewed again during annual file review?</label>
+                            <select id="annual-review" name="annual_review" class="mtrc-input mtrc-select">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                                <option value="na">N/A</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

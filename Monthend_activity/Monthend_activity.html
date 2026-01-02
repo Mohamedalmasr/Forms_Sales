@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monthly Trust Account Reconciliation Checklist &amp; Sign-Off</title>
+    <link rel="stylesheet" href="Monthend_activity.css">
+</head>
+<body>
+    <div class="mtr-container">
+        <header class="mtr-header">
+            <div class="mtr-badge">Appendix A</div>
+            <h1>Monthly Trust Account Reconciliation Checklist &amp; Sign-Off</h1>
+            <p class="mtr-subtitle">
+                Use this form each month to document trust account reconciliation and Licensed Manager review.
+            </p>
+
+            <div class="mtr-header-grid">
+                <div class="mtr-field-row">
+                    <label for="trustAccount" class="mtr-field-label">Trust Account</label>
+                    <input type="text" id="trustAccount" name="trustAccount" class="mtr-input">
+                </div>
+                <div class="mtr-field-row">
+                    <label for="monthEndDate" class="mtr-field-label">Month-End Date</label>
+                    <input type="date" id="monthEndDate" name="monthEndDate" class="mtr-input">
+                </div>
+                <div class="mtr-field-row">
+                    <label for="preparerName" class="mtr-field-label">Preparer Name &amp; Position</label>
+                    <input type="text" id="preparerName" name="preparerName" class="mtr-input">
+                </div>
+                <div class="mtr-field-row">
+                    <label for="datePrepared" class="mtr-field-label">Date Prepared</label>
+                    <input type="date" id="datePrepared" name="datePrepared" class="mtr-input">
+                </div>
+                <div class="mtr-field-row">
+                    <label for="lmName" class="mtr-field-label">Licensed Manager (LM) Name</label>
+                    <input type="text" id="lmName" name="lmName" class="mtr-input">
+                </div>
+                <div class="mtr-field-row">
+                    <label for="dateReviewed" class="mtr-field-label">Date Reviewed</label>
+                    <input type="date" id="dateReviewed" name="dateReviewed" class="mtr-input">
+                </div>
+            </div>
+
+            <div class="mtr-month-type">
+                <span class="mtr-month-type-label">Month Type (check one):</span>
+                <label class="mtr-choice">
+                    <input type="radio" name="monthType" value="normal">
+                    <span>Normal month – trust activity occurred (complete Sections 1–6; Section 7 if applicable)</span>
+                </label>
+                <label class="mtr-choice">
+                    <input type="radio" name="monthType" value="noActivity">
+                    <span>No activity month – complete Section 7 only</span>
+                </label>
+            </div>
+        </header>
+
+        <main>
+            <!-- SECTION 1 -->
+            <section class="mtr-section">
+                <div class="mtr-section-header">
+                    <h2>Section 1 – Month-End Cut-Off</h2>
+                    <p class="mtr-objective">
+                        Objective: All trust activity for the month is recorded and supported by a complete bank statement.
+                    </p>
+                </div>
+                <table id="mtr-table-s1" class="mtr-table mtr-table-yn">
+                    <thead>
+                        <tr>
+                            <th class="mtr-col-req">Requirement</th>
+                            <th class="mtr-col-choice">Y</th>
+                            <th class="mtr-col-choice">N</th>
+                            <th class="mtr-col-choice">N/A</th>
+                            <th class="mtr-col-details">Details / Exceptions</th>
+                            <th class="mtr-col-init">Init</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>All trust transactions for the month have been recorded in the trust ledger.</td>
+                            <td class="mtr-center"><input type="checkbox" name="s1_1_y"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s1_1_n"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s1_1_na"></td>
+                            <td><textarea name="s1_1_details" class="mtr-input mtr-textarea"></textarea></td>
+                            <td><input type="text" name="s1_1_init" class="mtr-input mtr-init-input"></td>
+                        </tr>
+                        <tr>
+                            <td>All closed deals have been updated for trust movements (deposits/withdrawals).</td>
+                            <td class="mtr-center"><input type="checkbox" name="s1_2_y"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s1_2_n"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s1_2_na"></td>
+                            <td><textarea name="s1_2_details" class="mtr-input mtr-textarea"></textarea></td>
+                            <td><input type="text" name="s1_2_init" class="mtr-input mtr-init-input"></td>
+                        </tr>
+                        <tr>
+                            <td>Complete month-end bank statement obtained for the trust account.</td>
+                            <td class="mtr-center"><input type="checkbox" name="s1_3_y"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s1_3_n"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s1_3_na"></td>
+                            <td><textarea name="s1_3_details" class="mtr-input mtr-textarea"></textarea></td>
+                            <td><input type="text" name="s1_3_init" class="mtr-input mtr-init-input"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- SECTION 2 -->
+            <section class="mtr-section">
+                <div class="mtr-section-header">
+                    <h2>Section 2 – Trust Liability Listing</h2>
+                    <p class="mtr-objective">
+                        Objective: Trust liability listing is complete and reconciles to individual files/clients.
+                    </p>
+                </div>
+                <table id="mtr-table-s2" class="mtr-table mtr-table-yn">
+                    <thead>
+                        <tr>
+                            <th class="mtr-col-req">Requirement</th>
+                            <th class="mtr-col-choice">Y</th>
+                            <th class="mtr-col-choice">N</th>
+                            <th class="mtr-col-choice">N/A</th>
+                            <th class="mtr-col-details">Details / Exceptions</th>
+                            <th class="mtr-col-init">Init</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Listing of all trust balances by file/client prepared as of month-end.</td>
+                            <td class="mtr-center"><input type="checkbox" name="s2_1_y"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s2_1_n"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s2_1_na"></td>
+                            <td><textarea name="s2_1_details" class="mtr-input mtr-textarea"></textarea></td>
+                            <td><input type="text" name="s2_1_init" class="mtr-input mtr-init-input"></td>
+                        </tr>
+                        <tr>
+                            <td>Each active file/client has a clearly identifiable balance.</td>
+                            <td class="mtr-center"><input type="checkbox" name="s2_2_y"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s2_2_n"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s2_2_na"></td>
+                            <td><textarea name="s2_2_details" class="mtr-input mtr-textarea"></textarea></td>
+                            <td><input type="text" name="s2_2_init" class="mtr-input mtr-init-input"></td>
+                        </tr>
+                        <tr>
+                            <td>Total trust liability calculated from listing.</td>
+                            <td class="mtr-center"><input type="checkbox" name="s2_3_y"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s2_3_n"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s2_3_na"></td>
+                            <td><textarea name="s2_3_details" class="mtr-input mtr-textarea"></textarea></td>
+                            <td><input type="text" name="s2_3_init" class="mtr-input mtr-init-input"></td>
+                        </tr>
+                        <tr>
+                            <td>Unusual or long-standing balances identified and flagged.</td>
+                            <td class="mtr-center"><input type="checkbox" name="s2_4_y"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s2_4_n"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s2_4_na"></td>
+                            <td><textarea name="s2_4_details" class="mtr-input mtr-textarea"></textarea></td>
+                            <td><input type="text" name="s2_4_init" class="mtr-input mtr-init-input"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="mtr-subsection">
+                    <h3>2.5 Unusual / Long-Standing Balances (if any)</h3>
+                    <table id="mtr-table-s2-5" class="mtr-table mtr-table-sub">
+                        <thead>
+                            <tr>
+                                <th>File/Client ID</th>
+                                <th>Client Name</th>
+                                <th class="mtr-col-amount">Amount</th>
+                                <th>Nature of Issue / Reason</th>
+                                <th>Action Plan</th>
+                                <th class="mtr-col-date">Target Resolution Date</th>
+                                <th class="mtr-col-init">INIT</th>
+                                <th class="mtr-col-actions">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="mtr-s2-5-row" data-index="1">
+                                <td><input type="text" data-field="file" name="s2_5_row1_file" class="mtr-input"></td>
+                                <td><input type="text" data-field="name" name="s2_5_row1_name" class="mtr-input"></td>
+                                <td><input type="text" data-field="amount" name="s2_5_row1_amount" class="mtr-input"></td>
+                                <td><textarea data-field="issue" name="s2_5_row1_issue" class="mtr-input mtr-textarea"></textarea></td>
+                                <td><textarea data-field="plan" name="s2_5_row1_plan" class="mtr-input mtr-textarea"></textarea></td>
+                                <td><input type="date" data-field="target" name="s2_5_row1_target" class="mtr-input"></td>
+                                <td><input type="text" data-field="init" name="s2_5_row1_init" class="mtr-input mtr-init-input"></td>
+                                <td class="mtr-actions-cell">
+                                    <button type="button" class="mtr-action-btn mtr-action-edit" aria-label="Edit row"></button>
+                                    <button type="button" class="mtr-action-btn mtr-action-delete" aria-label="Delete row"></button>
+                                    <button type="button" class="mtr-action-btn mtr-action-add" aria-label="Add row">+</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- SECTION 3 -->
+            <section class="mtr-section">
+                <div class="mtr-section-header">
+                    <h2>Section 3 – Bank Reconciliation</h2>
+                    <p class="mtr-objective">
+                        Objective: Prepare a full bank reconciliation from the bank statement to the reconciled bank balance.
+                    </p>
+                </div>
+
+                <div class="mtr-subsection">
+                    <h3>3.1 Reconciliation Summary</h3>
+                    <div class="mtr-summary-grid">
+                        <div class="mtr-summary-row">
+                            <label for="s3_bankClosing" class="mtr-summary-label">
+                                Bank Statement Closing Balance (as at month-end)
+                            </label>
+                            <div class="mtr-currency">
+                                <span>$</span>
+                                <input type="text" id="s3_bankClosing" name="s3_bankClosing" class="mtr-input">
+                            </div>
+                        </div>
+                        <div class="mtr-summary-row">
+                            <label for="s3_outstandingDeposits" class="mtr-summary-label">
+                                Add: Outstanding deposits (recorded in ledger but not yet on statement)
+                            </label>
+                            <div class="mtr-currency">
+                                <span>$</span>
+                                <input type="text" id="s3_outstandingDeposits" name="s3_outstandingDeposits" class="mtr-input">
+                            </div>
+                        </div>
+                        <div class="mtr-summary-row">
+                            <label for="s3_outstandingCheques" class="mtr-summary-label">
+                                Less: Outstanding cheques/withdrawals (recorded in ledger but not yet cleared)
+                            </label>
+                            <div class="mtr-currency">
+                                <span>$</span>
+                                <input type="text" id="s3_outstandingCheques" name="s3_outstandingCheques" class="mtr-input">
+                            </div>
+                        </div>
+                        <div class="mtr-summary-row">
+                            <label for="s3_otherAdjustments" class="mtr-summary-label">
+                                Plus / Minus: Other adjustments (bank errors, service charges, interest, etc.) – attach documentation
+                            </label>
+                            <div class="mtr-currency">
+                                <span>$</span>
+                                <input type="text" id="s3_otherAdjustments" name="s3_otherAdjustments" class="mtr-input">
+                            </div>
+                        </div>
+                        <div class="mtr-summary-row mtr-summary-total">
+                            <label for="s3_reconciledBalance" class="mtr-summary-label">
+                                Reconciled Bank Balance
+                            </label>
+                            <div class="mtr-currency">
+                                <span>$</span>
+                                <input type="text" id="s3_reconciledBalance" name="s3_reconciledBalance" class="mtr-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mtr-subsection">
+                    <h3>3.2 Bank Reconciliation Controls</h3>
+                    <table id="mtr-table-s3-2" class="mtr-table mtr-table-yn mtr-table-numbered">
+                        <thead>
+                            <tr>
+                                <th class="mtr-col-num">#</th>
+                                <th class="mtr-col-req">Requirement</th>
+                                <th class="mtr-col-choice">Yes</th>
+                                <th class="mtr-col-choice">No</th>
+                                <th class="mtr-col-choice">N/A</th>
+                                <th class="mtr-col-details">Details / Exceptions (if any)</th>
+                                <th class="mtr-col-init">INIT</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="mtr-center">3.2.1</td>
+                                <td>Reconciliation prepared using month-end bank statement closing balance.</td>
+                                <td class="mtr-center"><input type="checkbox" name="s3_2_1_y"></td>
+                                <td class="mtr-center"><input type="checkbox" name="s3_2_1_n"></td>
+                                <td class="mtr-center"><input type="checkbox" name="s3_2_1_na"></td>
+                                <td><textarea name="s3_2_1_details" class="mtr-input mtr-textarea"></textarea></td>
+                                <td><input type="text" name="s3_2_1_init" class="mtr-input mtr-init-input"></td>
+                            </tr>
+                            <tr>
+                                <td class="mtr-center">3.2.2</td>
+                                <td>All outstanding deposits are listed and traceable to the trust ledger.</td>
+                                <td class="mtr-center"><input type="checkbox" name="s3_2_2_y"></td>
+                                <td class="mtr-center"><input type="checkbox" name="s3_2_2_n"></td>
+                                <td class="mtr-center"><input type="checkbox" name="s3_2_2_na"></td>
+                                <td><textarea name="s3_2_2_details" class="mtr-input mtr-textarea"></textarea></td>
+                                <td><input type="text" name="s3_2_2_init" class="mtr-input mtr-init-input"></td>
+                            </tr>
+                            <tr>
+                                <td class="mtr-center">3.2.3</td>
+                                <td>All outstanding cheques/withdrawals are listed and traceable to the trust ledger.</td>
+                                <td class="mtr-center"><input type="checkbox" name="s3_2_3_y"></td>
+                                <td class="mtr-center"><input type="checkbox" name="s3_2_3_n"></td>
+                                <td class="mtr-center"><input type="checkbox" name="s3_2_3_na"></td>
+                                <td><textarea name="s3_2_3_details" class="mtr-input mtr-textarea"></textarea></td>
+                                <td><input type="text" name="s3_2_3_init" class="mtr-input mtr-init-input"></td>
+                            </tr>
+                            <tr>
+                                <td class="mtr-center">3.2.4</td>
+                                <td>All bank errors/adjustments documented with supporting evidence and explanations.</td>
+                                <td class="mtr-center"><input type="checkbox" name="s3_2_4_y"></td>
+                                <td class="mtr-center"><input type="checkbox" name="s3_2_4_n"></td>
+                                <td class="mtr-center"><input type="checkbox" name="s3_2_4_na"></td>
+                                <td><textarea name="s3_2_4_details" class="mtr-input mtr-textarea"></textarea></td>
+                                <td><input type="text" name="s3_2_4_init" class="mtr-input mtr-init-input"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- SECTION 4 -->
+            <section class="mtr-section">
+                <div class="mtr-section-header">
+                    <h2>Section 4 – Comparison: Reconciled Bank Balance vs Trust Liability</h2>
+                    <p class="mtr-objective">
+                        Objective: Confirm the reconciled bank balance equals the total trust liability.
+                    </p>
+                </div>
+
+                <div class="mtr-subsection">
+                    <div class="mtr-summary-grid">
+                        <div class="mtr-summary-row">
+                            <label for="s4_reconciled" class="mtr-summary-label">
+                                Reconciled Bank Balance (from Section 3)
+                            </label>
+                            <div class="mtr-currency">
+                                <span>$</span>
+                                <input type="text" id="s4_reconciled" name="s4_reconciled" class="mtr-input">
+                            </div>
+                        </div>
+                        <div class="mtr-summary-row">
+                            <label for="s4_totalLiability" class="mtr-summary-label">
+                                Total Trust Liability (from Section 2)
+                            </label>
+                            <div class="mtr-currency">
+                                <span>$</span>
+                                <input type="text" id="s4_totalLiability" name="s4_totalLiability" class="mtr-input">
+                            </div>
+                        </div>
+                        <div class="mtr-summary-row mtr-summary-total">
+                            <label for="s4_difference" class="mtr-summary-label">
+                                Difference
+                            </label>
+                            <div class="mtr-currency">
+                                <span>$</span>
+                                <input type="text" id="s4_difference" name="s4_difference" class="mtr-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mtr-subsection">
+                    <table id="mtr-table-s4" class="mtr-table mtr-table-yn mtr-table-numbered">
+                        <thead>
+                            <tr>
+                                <th class="mtr-col-num">#</th>
+                                <th class="mtr-col-req">Requirement</th>
+                                <th class="mtr-col-choice">Yes</th>
+                                <th class="mtr-col-choice">No</th>
+                                <th class="mtr-col-choice">N/A</th>
+                                <th class="mtr-col-details">Details / Exceptions (if any)</th>
+                                <th class="mtr-col-init">INIT</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="mtr-center">4.1</td>
+                                <td>Reconciled bank balance equals total trust liability (difference is $0).</td>
+                                <td class="mtr-center"><input type="checkbox" name="s4_1_y"></td>
+                                <td class="mtr-center"><input type="checkbox" name="s4_1_n"></td>
+                                <td class="mtr-center"><input type="checkbox" name="s4_1_na"></td>
+                                <td><textarea name="s4_1_details" class="mtr-input mtr-textarea"></textarea></td>
+                                <td><input type="text" name="s4_1_init" class="mtr-input mtr-init-input"></td>
+                            </tr>
+                            <tr>
+                                <td class="mtr-center">4.2</td>
+                                <td>If difference is not zero, difference investigated and explained; temporary discrepancy documented with LM involvement.</td>
+                                <td class="mtr-center"><input type="checkbox" name="s4_2_y"></td>
+                                <td class="mtr-center"><input type="checkbox" name="s4_2_n"></td>
+                                <td class="mtr-center"><input type="checkbox" name="s4_2_na"></td>
+                                <td><textarea name="s4_2_details" class="mtr-input mtr-textarea"></textarea></td>
+                                <td><input type="text" name="s4_2_init" class="mtr-input mtr-init-input"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="mtr-extra-note">
+                        <label for="s4_differenceExplanation" class="mtr-summary-label">
+                            If Difference ≠ $0, explain and document:
+                        </label>
+                        <textarea id="s4_differenceExplanation" name="s4_differenceExplanation" class="mtr-input mtr-textarea"></textarea>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 5 -->
+            <section class="mtr-section">
+                <div class="mtr-section-header">
+                    <h2>Section 5 – Reconciliation Package Assembly</h2>
+                    <p class="mtr-objective">
+                        Objective: Ensure a complete monthly package is compiled and ready for LM review.
+                    </p>
+                </div>
+
+                <table id="mtr-table-s5" class="mtr-table mtr-table-yn mtr-table-numbered">
+                    <thead>
+                        <tr>
+                            <th class="mtr-col-num">#</th>
+                            <th class="mtr-col-req">Item Included in Monthly Reconciliation Package</th>
+                            <th class="mtr-col-choice">Yes</th>
+                            <th class="mtr-col-choice">No</th>
+                            <th class="mtr-col-choice">N/A</th>
+                            <th class="mtr-col-init">INIT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="mtr-center">5.1</td>
+                            <td>Month-end bank statement for the trust account.</td>
+                            <td class="mtr-center"><input type="checkbox" name="s5_1_y"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s5_1_n"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s5_1_na"></td>
+                            <td><input type="text" name="s5_1_init" class="mtr-input mtr-init-input"></td>
+                        </tr>
+                        <tr>
+                            <td class="mtr-center">5.2</td>
+                            <td>Completed bank reconciliation worksheet (Section 3).</td>
+                            <td class="mtr-center"><input type="checkbox" name="s5_2_y"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s5_2_n"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s5_2_na"></td>
+                            <td><input type="text" name="s5_2_init" class="mtr-input mtr-init-input"></td>
+                        </tr>
+                        <tr>
+                            <td class="mtr-center">5.3</td>
+                            <td>Trust liability listing (Section 2).</td>
+                            <td class="mtr-center"><input type="checkbox" name="s5_3_y"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s5_3_n"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s5_3_na"></td>
+                            <td><input type="text" name="s5_3_init" class="mtr-input mtr-init-input"></td>
+                        </tr>
+                        <tr>
+                            <td class="mtr-center">5.4</td>
+                            <td>Reconciling Items Log (if any items remain outstanding).</td>
+                            <td class="mtr-center"><input type="checkbox" name="s5_4_y"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s5_4_n"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s5_4_na"></td>
+                            <td><input type="text" name="s5_4_init" class="mtr-input mtr-init-input"></td>
+                        </tr>
+                        <tr>
+                            <td class="mtr-center">5.5</td>
+                            <td>Supporting documents (bank advices, corrections, correspondence, etc.).</td>
+                            <td class="mtr-center"><input type="checkbox" name="s5_5_y"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s5_5_n"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s5_5_na"></td>
+                            <td><input type="text" name="s5_5_init" class="mtr-input mtr-init-input"></td>
+                        </tr>
+                        <tr>
+                            <td class="mtr-center">5.6</td>
+                            <td>This Monthly Trust Account Reconciliation Checklist completed in full.</td>
+                            <td class="mtr-center"><input type="checkbox" name="s5_6_y"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s5_6_n"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s5_6_na"></td>
+                            <td><input type="text" name="s5_6_init" class="mtr-input mtr-init-input"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="mtr-cert-block">
+                    <h3>Preparer Certification</h3>
+                    <p class="mtr-cert-text">
+                        I certify that the above reconciliation has been prepared based on the information available and that,
+                        to the best of my knowledge, it is complete and accurate.
+                    </p>
+                    <div class="mtr-cert-grid">
+                        <div class="mtr-field-row">
+                            <label for="prepCertName" class="mtr-field-label">Preparer Name (print)</label>
+                            <input type="text" id="prepCertName" name="prepCertName" class="mtr-input">
+                        </div>
+                        <div class="mtr-field-row">
+                            <label for="prepCertSignature" class="mtr-field-label">Signature</label>
+                            <input type="text" id="prepCertSignature" name="prepCertSignature" class="mtr-input">
+                        </div>
+                        <div class="mtr-field-row">
+                            <label for="prepCertDate" class="mtr-field-label">Date</label>
+                            <input type="date" id="prepCertDate" name="prepCertDate" class="mtr-input">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 6 -->
+            <section class="mtr-section">
+                <div class="mtr-section-header">
+                    <h2>Section 6 – Licensed Manager Review</h2>
+                    <p class="mtr-objective">
+                        Objective: LM reviews, challenges where necessary, and formally approves the reconciliation.
+                    </p>
+                </div>
+
+                <table id="mtr-table-s6" class="mtr-table mtr-table-yn mtr-table-numbered">
+                    <thead>
+                        <tr>
+                            <th class="mtr-col-num">#</th>
+                            <th class="mtr-col-req">Licensed Manager Review Steps</th>
+                            <th class="mtr-col-choice">Yes</th>
+                            <th class="mtr-col-choice">No</th>
+                            <th class="mtr-col-choice">N/A</th>
+                            <th class="mtr-col-init">INIT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="mtr-center">6.1</td>
+                            <td>I have reviewed the full reconciliation package for completeness and reasonableness.</td>
+                            <td class="mtr-center"><input type="checkbox" name="s6_1_y"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s6_1_n"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s6_1_na"></td>
+                            <td><input type="text" name="s6_1_init" class="mtr-input mtr-init-input"></td>
+                        </tr>
+                        <tr>
+                            <td class="mtr-center">6.2</td>
+                            <td>I confirm that the reconciled bank balance equals the total trust liability, or that any temporary discrepancy is properly documented and under investigation.</td>
+                            <td class="mtr-center"><input type="checkbox" name="s6_2_y"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s6_2_n"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s6_2_na"></td>
+                            <td><input type="text" name="s6_2_init" class="mtr-input mtr-init-input"></td>
+                        </tr>
+                        <tr>
+                            <td class="mtr-center">6.3</td>
+                            <td>I have reviewed long-standing/unusual items and I am satisfied with the action plan.</td>
+                            <td class="mtr-center"><input type="checkbox" name="s6_3_y"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s6_3_n"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s6_3_na"></td>
+                            <td><input type="text" name="s6_3_init" class="mtr-input mtr-init-input"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="mtr-cert-block">
+                    <div class="mtr-field-row mtr-fullwidth">
+                        <label for="lmComments" class="mtr-field-label">LM Comments (if any)</label>
+                        <textarea id="lmComments" name="lmComments" class="mtr-input mtr-textarea"></textarea>
+                    </div>
+                    <div class="mtr-cert-grid">
+                        <div class="mtr-field-row">
+                            <label for="lmCertName" class="mtr-field-label">Licensed Manager Name (print)</label>
+                            <input type="text" id="lmCertName" name="lmCertName" class="mtr-input">
+                        </div>
+                        <div class="mtr-field-row">
+                            <label for="lmCertSignature" class="mtr-field-label">Signature</label>
+                            <input type="text" id="lmCertSignature" name="lmCertSignature" class="mtr-input">
+                        </div>
+                        <div class="mtr-field-row">
+                            <label for="lmCertDate" class="mtr-field-label">Date of Review</label>
+                            <input type="date" id="lmCertDate" name="lmCertDate" class="mtr-input">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 7 -->
+            <section class="mtr-section">
+                <div class="mtr-section-header">
+                    <h2>Section 7 – Months With No Activity</h2>
+                    <p class="mtr-objective">
+                        (Complete this section only if “No activity month” was selected at the top.) Objective: Document that there was no activity, and that ledger and bank balances are consistent.
+                    </p>
+                </div>
+
+                <table id="mtr-table-s7" class="mtr-table mtr-table-yn mtr-table-numbered">
+                    <thead>
+                        <tr>
+                            <th class="mtr-col-num">#</th>
+                            <th class="mtr-col-req">Requirement</th>
+                            <th class="mtr-col-choice">Yes</th>
+                            <th class="mtr-col-choice">No</th>
+                            <th class="mtr-col-choice">N/A</th>
+                            <th class="mtr-col-details">Details / Exceptions (if any)</th>
+                            <th class="mtr-col-init">INIT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="mtr-center">7.1</td>
+                            <td>No trust account deposits, withdrawals, or transfers occurred during the month.</td>
+                            <td class="mtr-center"><input type="checkbox" name="s7_1_y"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s7_1_n"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s7_1_na"></td>
+                            <td><textarea name="s7_1_details" class="mtr-input mtr-textarea"></textarea></td>
+                            <td><input type="text" name="s7_1_init" class="mtr-input mtr-init-input"></td>
+                        </tr>
+                        <tr>
+                            <td class="mtr-center">7.2</td>
+                            <td>Trust ledger balance at month-end agrees to the trust bank account balance.</td>
+                            <td class="mtr-center"><input type="checkbox" name="s7_2_y"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s7_2_n"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s7_2_na"></td>
+                            <td><textarea name="s7_2_details" class="mtr-input mtr-textarea"></textarea></td>
+                            <td><input type="text" name="s7_2_init" class="mtr-input mtr-init-input"></td>
+                        </tr>
+                        <tr>
+                            <td class="mtr-center">7.3</td>
+                            <td>Month-end bank statement (or online printout) obtained and attached to this form.</td>
+                            <td class="mtr-center"><input type="checkbox" name="s7_3_y"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s7_3_n"></td>
+                            <td class="mtr-center"><input type="checkbox" name="s7_3_na"></td>
+                            <td><textarea name="s7_3_details" class="mtr-input mtr-textarea"></textarea></td>
+                            <td><input type="text" name="s7_3_init" class="mtr-input mtr-init-input"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="mtr-cert-block">
+                    <h3>Preparer Certification – No Activity Month</h3>
+                    <p class="mtr-cert-text">
+                        I certify that there was no trust account activity during the month and that the trust ledger and
+                        bank statement balances agree.
+                    </p>
+                    <div class="mtr-cert-grid">
+                        <div class="mtr-field-row">
+                            <label for="s7_prepName" class="mtr-field-label">Preparer Name (print)</label>
+                            <input type="text" id="s7_prepName" name="s7_prepName" class="mtr-input">
+                        </div>
+                        <div class="mtr-field-row">
+                            <label for="s7_prepSig" class="mtr-field-label">Signature</label>
+                            <input type="text" id="s7_prepSig" name="s7_prepSig" class="mtr-input">
+                        </div>
+                        <div class="mtr-field-row">
+                            <label for="s7_prepDate" class="mtr-field-label">Date</label>
+                            <input type="date" id="s7_prepDate" name="s7_prepDate" class="mtr-input">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mtr-cert-block">
+                    <h3>Licensed Manager Review – No Activity Month</h3>
+                    <p class="mtr-cert-text">
+                        I have reviewed this no-activity reconciliation and am satisfied that it is complete and accurate.
+                    </p>
+                    <div class="mtr-cert-grid">
+                        <div class="mtr-field-row">
+                            <label for="s7_lmName" class="mtr-field-label">Licensed Manager Name (print)</label>
+                            <input type="text" id="s7_lmName" name="s7_lmName" class="mtr-input">
+                        </div>
+                        <div class="mtr-field-row">
+                            <label for="s7_lmSig" class="mtr-field-label">Signature</label>
+                            <input type="text" id="s7_lmSig" name="s7_lmSig" class="mtr-input">
+                        </div>
+                        <div class="mtr-field-row">
+                            <label for="s7_lmDate" class="mtr-field-label">Date</label>
+                            <input type="date" id="s7_lmDate" name="s7_lmDate" class="mtr-input">
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mtr-note">
+                    If preferred, Section 7 and its header may be copied into a separate one-page form titled
+                    “Monthly Trust Account Reconciliation – No Activity Certification (Trust Account)” for quiet months.
+                </p>
+            </section>
+        </main>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('table.mtr-table-yn').forEach((table) => {
+                const headerRow = table.querySelector('thead tr');
+                if (headerRow) {
+                    const choiceHeaders = headerRow.querySelectorAll('.mtr-col-choice');
+                    if (choiceHeaders.length > 1) {
+                        const firstHeader = choiceHeaders[0];
+                        firstHeader.textContent = '';
+                        firstHeader.classList.add('mtr-col-response');
+                        firstHeader.removeAttribute('colspan');
+
+                        choiceHeaders.forEach((cell, index) => {
+                            if (index > 0) {
+                                cell.remove();
+                            }
+                        });
+                    }
+                }
+
+                table.querySelectorAll('tbody tr').forEach((row) => {
+                    const checkboxCells = Array.from(row.querySelectorAll('td')).filter((td) =>
+                        td.querySelector('input[type="checkbox"]')
+                    );
+
+                    if (checkboxCells.length > 1) {
+                        const firstCell = checkboxCells[0];
+                        const firstCheckbox = firstCell.querySelector('input[type="checkbox"]');
+                        const baseName = firstCheckbox?.name
+                            ? firstCheckbox.name.replace(/_(y|n|na)$/i, '')
+                            : '';
+
+                        const select = document.createElement('select');
+                        select.name = baseName ? `${baseName}_choice` : 'choice';
+                        select.className = 'mtr-yn-select mtr-input';
+
+                        [
+                            { value: 'Yes', label: 'Yes' },
+                            { value: 'No', label: 'No' },
+                            { value: 'Yes / No', label: 'Yes / No' }
+                        ].forEach(({ value, label }) => {
+                            const option = document.createElement('option');
+                            option.value = value;
+                            option.textContent = label;
+                            select.appendChild(option);
+                        });
+
+                        firstCell.innerHTML = '';
+                        firstCell.colSpan = 1;
+                        firstCell.classList.add('mtr-col-response-cell');
+                        firstCell.appendChild(select);
+
+                        for (let i = 1; i < checkboxCells.length; i++) {
+                            checkboxCells[i].remove();
+                        }
+                    }
+                });
+            });
+
+            document.querySelectorAll('input.mtr-init-input').forEach((input) => {
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.name = input.name;
+                checkbox.className = 'mtr-init-checkbox';
+                input.replaceWith(checkbox);
+            });
+
+            const s25Table = document.getElementById('mtr-table-s2-5');
+            if (s25Table) {
+                const tbody = s25Table.querySelector('tbody');
+                const updateRowNames = (row, index) => {
+                    row.dataset.index = String(index);
+                    row.querySelectorAll('[data-field]').forEach((el) => {
+                        const field = el.getAttribute('data-field');
+                        if (field) {
+                            el.name = `s2_5_row${index}_${field}`;
+                        }
+                    });
+                };
+
+                const clearRowValues = (row) => {
+                    row.querySelectorAll('input, textarea').forEach((el) => {
+                        if (el.type === 'checkbox') {
+                            el.checked = false;
+                        } else {
+                            el.value = '';
+                        }
+                    });
+                };
+
+                const renumberRows = () => {
+                    Array.from(tbody.querySelectorAll('.mtr-s2-5-row')).forEach((r, idx) => updateRowNames(r, idx + 1));
+                };
+
+                const addRowAfter = (refRow) => {
+                    const clone = refRow.cloneNode(true);
+                    clearRowValues(clone);
+                    tbody.insertBefore(clone, refRow.nextSibling);
+                    renumberRows();
+                };
+
+                tbody.addEventListener('click', (event) => {
+                    const btn = event.target.closest('.mtr-action-btn');
+                    if (!btn) return;
+                    const row = btn.closest('.mtr-s2-5-row');
+                    if (!row) return;
+
+                    if (btn.classList.contains('mtr-action-add')) {
+                        addRowAfter(row);
+                    } else if (btn.classList.contains('mtr-action-delete')) {
+                        const rows = tbody.querySelectorAll('.mtr-s2-5-row');
+                        if (rows.length > 1) {
+                            row.remove();
+                            renumberRows();
+                        } else {
+                            clearRowValues(row);
+                        }
+                    } else if (btn.classList.contains('mtr-action-edit')) {
+                        const firstInput = row.querySelector('input, textarea');
+                        if (firstInput) {
+                            firstInput.focus();
+                        }
+                    }
+                });
+
+                const initialRow = tbody.querySelector('.mtr-s2-5-row');
+                if (initialRow) {
+                    renumberRows();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
