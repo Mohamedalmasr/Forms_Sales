@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reconciling Items Log</title>
+    <link rel="stylesheet" href="Reconciling_Items_Log.css">
+</head>
+<body>
+    <div class="ril-container">
+        <header class="ril-header">
+            <h1>Reconciling Items Log</h1>
+            <p class="ril-subtitle">
+                Use this log to track all reconciling items identified during the monthly trust bank reconciliation until
+                they are fully resolved and cleared from the bank reconciliation.
+            </p>
+                <div class="ril-header-grid">
+                    <div class="ril-field-row">
+                        <label for="trustAccountName" class="ril-label">Trust Account Name</label>
+                        <input type="text" id="trustAccountName" name="trustAccountName" class="ril-input">
+                    </div>
+                    <div class="ril-field-row">
+                        <label for="monthPeriod" class="ril-label">Month / Period</label>
+                        <input type="text" id="monthPeriod" name="monthPeriod" class="ril-input ril-input-compact" placeholder="e.g., March 2025">
+                    </div>
+                    <div class="ril-field-row">
+                        <label for="trustAccountNumber" class="ril-label">Trust Account Number</label>
+                        <input type="text" id="trustAccountNumber" name="trustAccountNumber" class="ril-input ril-input-compact">
+                    </div>
+                </div>
+        </header>
+
+        <main>
+            <section class="ril-section">
+                <table class="ril-table">
+                    <thead>
+                        <tr>
+                            <th class="ril-col-item">Item #</th>
+                            <th class="ril-col-date">Date Identified</th>
+                            <th class="ril-col-desc">Description of Item</th>
+                            <th class="ril-col-amt">Amount</th>
+                            <th class="ril-col-type">Type (outstanding cheque, outstanding deposit, bank error, other)</th>
+                            <th class="ril-col-date">Expected Resolution Date</th>
+                            <th class="ril-col-notes">Action Taken / Notes</th>
+                            <th class="ril-col-date">Actual Resolution Date</th>
+                            <th class="ril-col-resolved">Resolved By (Name)</th>
+                            <th class="ril-col-actions">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ril-body">
+                        <tr data-index="1">
+                            <td><input type="text" name="item1_number" class="ril-input ril-input-center" data-field="number"></td>
+                            <td><input type="date" name="item1_dateIdentified" class="ril-input" data-field="dateIdentified"></td>
+                            <td><textarea name="item1_description" class="ril-input ril-textarea" data-field="description"></textarea></td>
+                            <td>
+                                <div class="ril-currency">
+                                    <span>$</span>
+                                    <input type="number" name="item1_amount" class="ril-input ril-input-num" step="0.01" data-field="amount">
+                                </div>
+                            </td>
+                            <td><input type="text" name="item1_type" class="ril-input" placeholder="e.g., outstanding cheque" data-field="type"></td>
+                            <td><input type="date" name="item1_expectedResolutionDate" class="ril-input" data-field="expectedResolutionDate"></td>
+                            <td><textarea name="item1_actionNotes" class="ril-input ril-textarea" data-field="actionNotes"></textarea></td>
+                            <td><input type="date" name="item1_actualResolutionDate" class="ril-input" data-field="actualResolutionDate"></td>
+                            <td><input type="text" name="item1_resolvedBy" class="ril-input" data-field="resolvedBy"></td>
+                            <td class="ril-actions">
+                                <button type="button" class="ril-btn ril-btn-add" title="Add row" aria-label="Add row">
+                                    <svg class="ril-icon" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </button>
+                                <button type="button" class="ril-btn ril-btn-edit" title="Edit row" aria-label="Edit row">
+                                    <svg class="ril-icon ril-icon-edit" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M4 14.5V16h1.5l8.8-8.8-1.5-1.5L4 14.5z" fill="currentColor"/>
+                                        <path d="M12.8 4.2l1.5 1.5 1-1a1.4 1.4 0 0 0 0-2l-.5-.5a1.4 1.4 0 0 0-2 0l-1 1z" fill="currentColor"/>
+                                    </svg>
+                                    <svg class="ril-icon ril-icon-done" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M5 10.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                                <button type="button" class="ril-btn ril-btn-delete" title="Delete row" aria-label="Delete row">
+                                    <svg class="ril-icon" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M6 6h8l-.6 9.5a1 1 0 0 1-1 .9H7.6a1 1 0 0 1-1-.9L6 6z" fill="currentColor"/>
+                                        <path d="M4 6h12M8 6V4h4v2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <template id="ril-row-template">
+                    <tr data-index="0">
+                        <td><input type="text" name="item0_number" class="ril-input ril-input-center" data-field="number"></td>
+                        <td><input type="date" name="item0_dateIdentified" class="ril-input" data-field="dateIdentified"></td>
+                        <td><textarea name="item0_description" class="ril-input ril-textarea" data-field="description"></textarea></td>
+                        <td>
+                            <div class="ril-currency">
+                                <span>$</span>
+                                <input type="number" name="item0_amount" class="ril-input ril-input-num" step="0.01" data-field="amount">
+                            </div>
+                        </td>
+                        <td><input type="text" name="item0_type" class="ril-input" placeholder="e.g., outstanding cheque" data-field="type"></td>
+                        <td><input type="date" name="item0_expectedResolutionDate" class="ril-input" data-field="expectedResolutionDate"></td>
+                        <td><textarea name="item0_actionNotes" class="ril-input ril-textarea" data-field="actionNotes"></textarea></td>
+                        <td><input type="date" name="item0_actualResolutionDate" class="ril-input" data-field="actualResolutionDate"></td>
+                        <td><input type="text" name="item0_resolvedBy" class="ril-input" data-field="resolvedBy"></td>
+                        <td class="ril-actions">
+                            <button type="button" class="ril-btn ril-btn-add" title="Add row" aria-label="Add row">
+                                <svg class="ril-icon" viewBox="0 0 20 20" aria-hidden="true">
+                                    <path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                            <button type="button" class="ril-btn ril-btn-edit" title="Edit row" aria-label="Edit row">
+                                <svg class="ril-icon ril-icon-edit" viewBox="0 0 20 20" aria-hidden="true">
+                                    <path d="M4 14.5V16h1.5l8.8-8.8-1.5-1.5L4 14.5z" fill="currentColor"/>
+                                    <path d="M12.8 4.2l1.5 1.5 1-1a1.4 1.4 0 0 0 0-2l-.5-.5a1.4 1.4 0 0 0-2 0l-1 1z" fill="currentColor"/>
+                                </svg>
+                                <svg class="ril-icon ril-icon-done" viewBox="0 0 20 20" aria-hidden="true">
+                                    <path d="M5 10.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <button type="button" class="ril-btn ril-btn-delete" title="Delete row" aria-label="Delete row">
+                                <svg class="ril-icon" viewBox="0 0 20 20" aria-hidden="true">
+                                    <path d="M6 6h8l-.6 9.5a1 1 0 0 1-1 .9H7.6a1 1 0 0 1-1-.9L6 6z" fill="currentColor"/>
+                                    <path d="M4 6h12M8 6V4h4v2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                </template>
+                <p class="ril-footnote">
+                    Note: Each reconciling item should be carried forward to subsequent months until resolved. Ensure aged items
+                    (over two months old) are reviewed and escalated to the Licensed Manager as required.
+                </p>
+            </section>
+        </main>
+    </div>
+    <script>
+        (() => {
+            const tableBody = document.getElementById("ril-body");
+            const template = document.getElementById("ril-row-template");
+
+            if (!tableBody || !template) {
+                return;
+            }
+
+            const getNextIndex = () => {
+                const rows = Array.from(tableBody.querySelectorAll("tr"));
+                const indices = rows.map((row) => Number(row.dataset.index) || 0);
+                return (indices.length ? Math.max(...indices) : 0) + 1;
+            };
+
+            const updateRowNames = (row, index) => {
+                row.dataset.index = String(index);
+                row.querySelectorAll("[data-field]").forEach((input) => {
+                    const field = input.getAttribute("data-field");
+                    input.name = `item${index}_${field}`;
+                });
+            };
+
+            const clearRowValues = (row) => {
+                row.querySelectorAll("input, textarea").forEach((input) => {
+                    input.value = "";
+                });
+            };
+
+            const addRow = () => {
+                const fragment = template.content.cloneNode(true);
+                const row = fragment.querySelector("tr");
+                const index = getNextIndex();
+                updateRowNames(row, index);
+                tableBody.appendChild(fragment);
+            };
+
+            const setEditingState = (row, button) => {
+                const isEditing = row.classList.toggle("ril-row-editing");
+                const label = isEditing ? "Done editing" : "Edit row";
+                button.setAttribute("title", label);
+                button.setAttribute("aria-label", label);
+                if (isEditing) {
+                    const firstInput = row.querySelector("input, textarea");
+                    if (firstInput) {
+                        firstInput.focus();
+                    }
+                }
+            };
+
+            tableBody.addEventListener("click", (event) => {
+                const target = event.target;
+                if (!(target instanceof HTMLElement)) {
+                    return;
+                }
+
+                const row = target.closest("tr");
+                if (!row) {
+                    return;
+                }
+
+                if (target.classList.contains("ril-btn-add")) {
+                    addRow();
+                } else if (target.classList.contains("ril-btn-delete")) {
+                    const rows = tableBody.querySelectorAll("tr");
+                    if (rows.length > 1) {
+                        row.remove();
+                    } else {
+                        clearRowValues(row);
+                    }
+                } else if (target.classList.contains("ril-btn-edit")) {
+                    setEditingState(row, target);
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

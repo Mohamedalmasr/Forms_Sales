@@ -1,0 +1,266 @@
+:root {
+  --caf-border: #d1d5db;
+  --caf-border-strong: #9ca3af;
+  --caf-bg: #f9fafb;
+  --caf-bg-card: #ffffff;
+  --caf-text-main: #111827;
+  --caf-text-muted: #4b5563;
+  --caf-accent: #1f4f8f;
+  --caf-radius-sm: 4px;
+  --caf-radius-lg: 10px;
+  --caf-shadow-soft: 0 2px 6px rgba(15, 23, 42, 0.08);
+  --caf-spacing-xs: 4px;
+  --caf-spacing-sm: 8px;
+  --caf-spacing-md: 12px;
+  --caf-spacing-lg: 20px;
+  --caf-spacing-xl: 28px;
+  --caf-font-size-sm: 0.8rem;
+  --caf-font-size: 0.9rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: var(--caf-spacing-xl);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background-color: var(--caf-bg);
+  color: var(--caf-text-main);
+}
+
+.caf-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--caf-bg-card);
+  border-radius: var(--caf-radius-lg);
+  box-shadow: var(--caf-shadow-soft);
+  padding: 24px 28px 32px;
+  border: 1px solid var(--caf-border);
+}
+
+.caf-header {
+  border-bottom: 2px solid var(--caf-border-strong);
+  padding-bottom: var(--caf-spacing-md);
+  margin-bottom: var(--caf-spacing-md);
+}
+
+.caf-header h1 {
+  margin: 0 0 4px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.caf-subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--caf-text-muted);
+}
+
+/* Sections */
+
+.caf-section {
+  margin-top: var(--caf-spacing-lg);
+  padding-top: var(--caf-spacing-sm);
+  border-top: 1px dashed var(--caf-border);
+}
+
+.caf-section h2 {
+  margin: 0 0 var(--caf-spacing-xs);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--caf-accent);
+}
+
+.caf-help {
+  margin: 0 0 var(--caf-spacing-xs);
+  font-size: var(--caf-font-size);
+  color: var(--caf-text-muted);
+}
+
+/* Grid & fields */
+
+.caf-grid {
+  display: grid;
+  gap: var(--caf-spacing-xs) var(--caf-spacing-lg);
+}
+
+.caf-grid-2col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.caf-field-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.caf-field-row.caf-full {
+  grid-column: 1 / -1;
+}
+
+.caf-label {
+  width: 210px;
+  font-size: var(--caf-font-size-sm);
+  font-weight: 600;
+}
+
+.caf-input {
+  flex: 1;
+  min-width: 0;
+  padding: 4px 6px;
+  border-radius: var(--caf-radius-sm);
+  border: 1px solid var(--caf-border);
+  font-size: var(--caf-font-size);
+  background-color: #f9fafb;
+}
+
+/* Three-column inline fields (used for Property Address / Seller / Brokerage) */
+.caf-three-cols {
+  display: flex;
+  gap: var(--caf-spacing-lg);
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.caf-three-cols .caf-field-col {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-width: 0; /* allow children to shrink instead of expanding container */
+}
+.caf-three-cols .caf-field-col .caf-label {
+  flex: 0 0 120px; /* slightly smaller fixed label width */
+  margin: 0 8px 0 0;
+  font-size: var(--caf-font-size-sm);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.caf-three-cols .caf-field-col .caf-input {
+  flex: 1 1 0;
+  min-width: 0; /* prevent input from forcing row wider than container */
+}
+
+@media (max-width: 900px) {
+  /* allow wrapping earlier on smaller screens so container width is preserved */
+  .caf-three-cols {
+    gap: var(--caf-spacing-md);
+  }
+}
+
+@media (max-width: 720px) {
+  .caf-three-cols {
+    flex-direction: column;
+  }
+  .caf-three-cols .caf-field-col {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .caf-three-cols .caf-field-col .caf-label {
+    flex: 0 0 auto;
+    width: auto;
+    margin: 0 0 6px 0;
+  }
+}
+
+.caf-input:focus {
+  outline: 1px solid var(--caf-accent);
+  border-color: var(--caf-accent);
+  background-color: #ffffff;
+}
+
+.caf-input::placeholder {
+  color: #9ca3af;
+}
+
+.caf-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Ensure large textareas span the full container width without causing overflow */
+.caf-textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+/* Prevent .caf-input elements from forcing container wider than intended */
+.caf-input,
+.caf-field-group,
+.caf-three-cols {
+  max-width: 100%;
+}
+
+/* stacked row: label above input/textarea */
+.caf-stacked {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.caf-stacked .caf-label {
+  width: auto;
+  margin-bottom: 6px;
+}
+.caf-stacked .caf-input {
+  width: 100%;
+}
+
+/* Signature blocks */
+
+.caf-signature-block {
+  margin-top: var(--caf-spacing-md);
+  padding: var(--caf-spacing-sm);
+  border-radius: var(--caf-radius-sm);
+  border: 1px dashed var(--caf-border-strong);
+  background-color: #f5f5ff;
+}
+
+.caf-signature-block h3 {
+  margin: 0 0 4px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+/* Button and field group alignment */
+
+.caf-field-group {
+  display: flex;
+  align-items: center;
+}
+
+.caf-button {
+  margin-left: 10px;
+}
+
+/* Print styles */
+
+@media print {
+  body {
+    background: #ffffff;
+    padding: 0;
+  }
+
+  .caf-container {
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    padding: 10px 12px;
+  }
+
+  .caf-header {
+    border-bottom-width: 1px;
+  }
+
+  .caf-input {
+    background-color: transparent;
+  }
+}

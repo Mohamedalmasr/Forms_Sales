@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Third-Party Deposit Acknowledgement Form</title>
+    <link rel="stylesheet" href="Third_Party_Deposit_Acknowledgement_Form.css">
+</head>
+<body>
+    <div class="form-container">
+        <header class="form-header">
+            <div class="form-org">Midgard Realty Inc.</div>
+            <h1>Third-Party Deposit Acknowledgement Form</h1>
+            <p class="form-subtitle">
+                To be completed for any deposit received from someone who is not a party to the Agreement of Purchase and Sale
+                and placed in the transaction file.
+            </p>
+        </header>
+
+        <form id="thirdPartyDepositForm">
+            <!-- Section 1: Transaction Details -->
+            <section class="form-section">
+                <h2>1. Transaction Details</h2>
+
+                <div class="field-row">
+                    <label for="transactionFileNo" class="field-label">Transaction / File No.</label>
+                    <input type="text" id="transactionFileNo" name="transactionFileNo" class="input-text">
+                </div>
+
+                <div class="field-row">
+                    <label for="propertyAddress1" class="field-label">Property Address</label>
+                    <input type="text" id="propertyAddress1" name="propertyAddress1" class="input-text" placeholder="Line 1">
+                </div>
+                <div class="field-row indent">
+                    <label for="propertyAddress2" class="field-label sr-only">Property Address (Line 2)</label>
+                    <input type="text" id="propertyAddress2" name="propertyAddress2" class="input-text" placeholder="Line 2 (optional)">
+                </div>
+
+                <div class="field-row">
+                    <label for="apsDate" class="field-label">Agreement of Purchase and Sale (APS) Date</label>
+                    <input type="date" id="apsDate" name="apsDate" class="input-text">
+                    <span class="field-hint">YYYY-MM-DD</span>
+                </div>
+
+                <div class="grid-2">
+                    <div>
+                        <div class="group-label">Purchaser(s) (as named in APS)</div>
+                        <div class="field-row compact">
+                            <label for="purchaser1" class="field-label">Purchaser 1</label>
+                            <input type="text" id="purchaser1" name="purchaser1" class="input-text">
+                        </div>
+                        <div class="field-row compact">
+                            <label for="purchaser2" class="field-label">Purchaser 2</label>
+                            <input type="text" id="purchaser2" name="purchaser2" class="input-text">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="group-label">Vendor(s) (as named in APS)</div>
+                        <div class="field-row compact">
+                            <label for="vendor1" class="field-label">Vendor 1</label>
+                            <input type="text" id="vendor1" name="vendor1" class="input-text">
+                        </div>
+                        <div class="field-row compact">
+                            <label for="vendor2" class="field-label">Vendor 2</label>
+                            <input type="text" id="vendor2" name="vendor2" class="input-text">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Third-Party Payor Information -->
+            <section class="form-section">
+                <h2>2. Third-Party Payor Information</h2>
+
+                <div class="field-row">
+                    <label for="thirdPartyName" class="field-label">Name of Third-Party Payor</label>
+                    <input type="text" id="thirdPartyName" name="thirdPartyName" class="input-text">
+                </div>
+
+                <div class="field-row">
+                    <label for="relationshipToPurchaser" class="field-label">Relationship to Purchaser(s)</label>
+                    <input type="text" id="relationshipToPurchaser" name="relationshipToPurchaser" class="input-text">
+                </div>
+
+                <div class="field-row">
+                    <label for="thirdPartyAddress1" class="field-label">Mailing Address</label>
+                    <input type="text" id="thirdPartyAddress1" name="thirdPartyAddress1" class="input-text" placeholder="Line 1">
+                </div>
+                <div class="field-row indent">
+                    <label for="thirdPartyAddress2" class="field-label sr-only">Mailing Address (Line 2)</label>
+                    <input type="text" id="thirdPartyAddress2" name="thirdPartyAddress2" class="input-text" placeholder="Line 2 (optional)">
+                </div>
+
+                <div class="grid-2">
+                    <div class="field-row compact">
+                        <label for="thirdPartyPhone" class="field-label">Phone</label>
+                        <input type="tel" id="thirdPartyPhone" name="thirdPartyPhone" class="input-text">
+                    </div>
+                    <div class="field-row compact">
+                        <label for="thirdPartyEmail" class="field-label">Email</label>
+                        <input type="email" id="thirdPartyEmail" name="thirdPartyEmail" class="input-text">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Deposit Details -->
+            <section class="form-section">
+                <h2>3. Deposit Details</h2>
+
+                <div class="field-row">
+                    <label for="depositAmount" class="field-label">Amount of Deposit</label>
+                    <div class="currency-group">
+                        <span class="currency-prefix">$</span>
+                        <input type="number" id="depositAmount" name="depositAmount" class="input-text" step="0.01" min="0">
+                    </div>
+                </div>
+
+                <div class="field-row">
+                    <div class="field-label">Form of Deposit</div>
+                    <div class="options-wrap">
+                        <label class="option-item">
+                            <input type="checkbox" name="depositForm" value="cash">
+                            <span>Cash</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="checkbox" name="depositForm" value="cheque">
+                            <span>Cheque</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="checkbox" name="depositForm" value="bankDraft">
+                            <span>Bank Draft</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="checkbox" name="depositForm" value="interac">
+                            <span>Interac e-Transfer</span>
+                        </label>
+                        <label class="option-item option-other">
+                            <input type="checkbox" name="depositForm" value="other">
+                            <span>Other:</span>
+                            <input type="text" name="depositFormOther" class="input-text inline-input">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="field-row">
+                    <label for="depositReceivedDate" class="field-label">Date Deposit Received by Brokerage</label>
+                    <input type="date" id="depositReceivedDate" name="depositReceivedDate" class="input-text">
+                    <span class="field-hint">YYYY-MM-DD</span>
+                </div>
+            </section>
+
+            <!-- Section 4: Purpose and Authority -->
+            <section class="form-section">
+                <h2>4. Purpose and Authority</h2>
+
+                <p class="section-text">
+                    I/We, the undersigned Third-Party Payor, confirm that the Deposit described above is being paid to:
+                </p>
+
+                <div class="field-row">
+                    <label for="brokerageNamePurpose" class="field-label">Name of Brokerage</label>
+                    <input type="text" id="brokerageNamePurpose" name="brokerageNamePurpose" class="input-text">
+                </div>
+
+                <p class="section-text">
+                    on behalf of the Purchaser(s) named in Section 1, in connection with the APS for the property described above.
+                </p>
+
+                <p class="section-text">
+                    I/We acknowledge and agree that:
+                </p>
+                <ul class="section-bullets">
+                    <li>The Deposit is held in the Brokerage’s trust account in accordance with the APS and applicable legislation.</li>
+                    <li>The Purchaser(s) named in the APS are the parties to the contract of purchase and sale.</li>
+                    <li>My/Our rights, if any, to reimbursement of the Deposit are between me/us and the Purchaser(s), and not against the Brokerage or the Vendor(s), except as set out below.</li>
+                </ul>
+            </section>
+
+            <!-- Section 5: Direction as to Who is Entitled to the Funds -->
+            <section class="form-section">
+                <h2>5. Direction as to Who is Entitled to the Funds</h2>
+
+                <div class="subsection">
+                    <h3>(A) If the transaction CLOSES</h3>
+                    <p class="section-text">
+                        If the purchase and sale transaction closes in accordance with the APS:
+                    </p>
+                    <label class="option-item">
+                        <input type="checkbox" name="closesDirection" value="creditToPurchaser">
+                        <span>
+                            The Deposit shall be credited toward the Purchaser(s)’ obligations under the APS
+                            (e.g., purchase price, adjustments, etc.) for the benefit of the Purchaser(s).
+                        </span>
+                    </label>
+
+                    <div class="field-row top-spaced">
+                        <label for="closesOther" class="field-label">
+                            Other (if different arrangement is agreed)
+                        </label>
+                    </div>
+                    <textarea id="closesOther" name="closesOther" class="input-text textarea"></textarea>
+                </div>
+
+                <div class="subsection">
+                    <h3>(B) If the transaction FAILS and the Deposit is to be RETURNED</h3>
+                    <p class="section-text">
+                        If the APS is terminated and the Deposit is to be returned in accordance with the APS and/or any mutual release:
+                    </p>
+
+                    <p class="field-label">Return the Deposit to (select one):</p>
+                    <div class="options-wrap vertical">
+                        <label class="option-item">
+                            <input type="radio" name="depositReturnTo" value="purchasers">
+                            <span>The Purchaser(s) named in the APS.</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="radio" name="depositReturnTo" value="thirdParty">
+                            <span>The Third-Party Payor named in Section 2.</span>
+                        </label>
+                        <label class="option-item option-other">
+                            <input type="radio" name="depositReturnTo" value="other">
+                            <span>Other (specify):</span>
+                            <input type="text" name="depositReturnOther" class="input-text inline-input">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>(C) If the Deposit is RELEASED TO THE SELLER</h3>
+                    <p class="section-text">
+                        If the APS is terminated and, under the APS and/or any mutual release or court order, the Deposit is released to the Seller:
+                    </p>
+                    <label class="option-item">
+                        <input type="checkbox" name="releasedToSeller" value="sellerEntitled">
+                        <span>
+                            The Seller shall be entitled to receive and retain the Deposit in accordance with the APS,
+                            mutual release, or court order.
+                        </span>
+                    </label>
+
+                    <p class="section-text small-top">
+                        By signing below, the Third-Party Payor and Purchaser(s) acknowledge and agree that once the Deposit is properly
+                        paid out to the Seller in accordance with the APS and any related documents, the Brokerage has no further
+                        liability regarding the Deposit, and any remaining rights or claims (if any) are strictly between the
+                        Purchaser(s), the Seller, and/or the Third-Party Payor.
+                    </p>
+
+                    <div class="field-row top-spaced">
+                        <label for="additionalTerms" class="field-label">Additional terms (if any)</label>
+                    </div>
+                    <textarea id="additionalTerms" name="additionalTerms" class="input-text textarea"></textarea>
+                </div>
+            </section>
+
+            <!-- Section 6: Acknowledgements and Signatures -->
+            <section class="form-section">
+                <h2>6. Acknowledgements and Signatures</h2>
+
+                <div class="subsection">
+                    <h3>Third-Party Payor</h3>
+                    <p class="section-text">
+                        I/We confirm that I/we have read and understand this Third-Party Deposit Acknowledgement Form,
+                        and that the directions given above accurately reflect my/our instructions.
+                    </p>
+
+                    <div class="grid-3">
+                        <div class="field-row compact">
+                            <label for="thirdPartySignature" class="field-label">Signature</label>
+                            <input type="text" id="thirdPartySignature" name="thirdPartySignature" class="input-text">
+                        </div>
+                        <div class="field-row compact">
+                            <label for="thirdPartyPrintName" class="field-label">Name (print)</label>
+                            <input type="text" id="thirdPartyPrintName" name="thirdPartyPrintName" class="input-text">
+                        </div>
+                        <div class="field-row compact">
+                            <label for="thirdPartyDate" class="field-label">Date</label>
+                            <input type="date" id="thirdPartyDate" name="thirdPartyDate" class="input-text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>Purchaser(s)</h3>
+                    <p class="section-text">
+                        I/We acknowledge that the Deposit has been provided by the Third-Party Payor named above on my/our behalf
+                        and agree to the directions regarding entitlement to the Deposit as set out in this form.
+                    </p>
+
+                    <div class="grid-2">
+                        <div>
+                            <div class="field-row compact">
+                                <label for="purchaser1Signature" class="field-label">Purchaser 1 Signature</label>
+                                <input type="text" id="purchaser1Signature" name="purchaser1Signature" class="input-text">
+                            </div>
+                            <div class="field-row compact">
+                                <label for="purchaser1PrintName" class="field-label">Name (print)</label>
+                                <input type="text" id="purchaser1PrintName" name="purchaser1PrintName" class="input-text">
+                            </div>
+                            <div class="field-row compact">
+                                <label for="purchaser1Date" class="field-label">Date</label>
+                                <input type="date" id="purchaser1Date" name="purchaser1Date" class="input-text">
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="field-row compact">
+                                <label for="purchaser2Signature" class="field-label">Purchaser 2 Signature</label>
+                                <input type="text" id="purchaser2Signature" name="purchaser2Signature" class="input-text">
+                            </div>
+                            <div class="field-row compact">
+                                <label for="purchaser2PrintName" class="field-label">Name (print)</label>
+                                <input type="text" id="purchaser2PrintName" name="purchaser2PrintName" class="input-text">
+                            </div>
+                            <div class="field-row compact">
+                                <label for="purchaser2Date" class="field-label">Date</label>
+                                <input type="date" id="purchaser2Date" name="purchaser2Date" class="input-text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field-row top-spaced">
+                        <label for="additionalPurchasers" class="field-label">
+                            Additional Purchasers (use if more than two purchasers)
+                        </label>
+                    </div>
+                    <textarea id="additionalPurchasers" name="additionalPurchasers" class="input-text textarea small"></textarea>
+                </div>
+            </section>
+
+            <!-- Section 7: Brokerage Acknowledgement -->
+            <section class="form-section">
+                <h2>7. Brokerage Acknowledgement</h2>
+
+                <p class="section-text">
+                    The undersigned acknowledges receipt of the Deposit described in this form and confirms that it will be held and
+                    disbursed strictly in accordance with:
+                </p>
+                <ul class="section-bullets">
+                    <li>The terms of the APS and any amendments;</li>
+                    <li>Any mutual releases or court orders; and</li>
+                    <li>
+                        The directions contained in this Third-Party Deposit Acknowledgement Form, to the extent they are
+                        consistent with the APS and applicable law.
+                    </li>
+                </ul>
+
+                <div class="grid-2">
+                    <div>
+                        <div class="field-row compact">
+                            <label for="brokerageNameAck" class="field-label">Name of Brokerage</label>
+                            <input type="text" id="brokerageNameAck" name="brokerageNameAck" class="input-text">
+                        </div>
+                        <div class="field-row compact">
+                            <label for="brokerageRepName" class="field-label">Name of Representative</label>
+                            <input type="text" id="brokerageRepName" name="brokerageRepName" class="input-text">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="field-row compact">
+                            <label for="brokerageRepTitle" class="field-label">Title / Role</label>
+                            <input type="text" id="brokerageRepTitle" name="brokerageRepTitle" class="input-text">
+                        </div>
+                        <div class="field-row compact">
+                            <label for="brokerageRepSignature" class="field-label">Signature of Representative</label>
+                            <input type="text" id="brokerageRepSignature" name="brokerageRepSignature" class="input-text">
+                        </div>
+                        <div class="field-row compact">
+                            <label for="brokerageRepDate" class="field-label">Date</label>
+                            <input type="date" id="brokerageRepDate" name="brokerageRepDate" class="input-text">
+                        </div>
+                    </div>
+                </div>
+
+                <p class="section-text note">
+                    This completed form must be placed in the transaction file together with the APS and related documents.
+                </p>
+            </section>
+        </form>
+    </div>
+</body>
+</html>
